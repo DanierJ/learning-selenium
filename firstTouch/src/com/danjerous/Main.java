@@ -5,14 +5,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Main {
 
-    private static final String EXEC_CHROME_DRIVER  = "C:\\Users\\Danier Javid\\Documents\\libs\\selenium-java-3.141.59\\chromedriver.exe";
+    private static final String CHROME_DRIVER_EXEC = "C:\\Users\\Danier Javid\\Documents\\libs\\selenium-java-3.141.59\\chromedriver.exe";
 
     public static void main(String[] args) {
 	// write your code here
 
         // First thing first, we need to create and set the web browser driver object before to do anything.
 
-        System.setProperty("webdriver.chrome.driver", EXEC_CHROME_DRIVER);
+        System.setProperty("webdriver.chrome.driver", CHROME_DRIVER_EXEC);
         WebDriver chromeDriver = new ChromeDriver();
 
         // Invoking web browser at the specified url
@@ -20,13 +20,5 @@ public class Main {
 
         // Getting some data from the page.
         System.out.println( chromeDriver.getTitle());
-
-
-
-
-
-
-        
-
     }
 }
