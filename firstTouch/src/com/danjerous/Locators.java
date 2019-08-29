@@ -36,6 +36,10 @@ public class Locators {
         // finding element by css selector
         driver.findElement(By.cssSelector("#u_0_n")).sendKeys("how are you?");
 
+        // $x("//*[@id='login_form']/table/tbody/tr[3]/td[2]/div/a) ---> Validating Xpath given by the browser
+
+        // $("") ---> to validate css selectors given by the browser .
+
 
 
 
