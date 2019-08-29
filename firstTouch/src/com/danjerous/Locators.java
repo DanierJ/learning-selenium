@@ -18,5 +18,10 @@ public class Locators {
         // finding an element by id.
         driver.findElement(By.id("email")).sendKeys("testing@test.com");
 
+        // finding element by name
+        driver.findElement(By.name("pass")).sendKeys("testing");
+
+
+
     }
 }
