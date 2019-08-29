@@ -23,7 +23,14 @@ public class Locators {
 
 
         // finding element by linkText
-        driver.findElement(By.linkText("¿Has olvidado los datos de la cuenta?")).click();
+      //  driver.findElement(By.linkText("¿Has olvidado los datos de la cuenta?")).click();
+
+        // classes should not have spaces, it only works with one class 
+        driver.get("http://www.colegioalbania.edu.co/");
+        // driver.findElement(By.className("cf footer")); // this gives us an error
+
+
+
 
 
 
