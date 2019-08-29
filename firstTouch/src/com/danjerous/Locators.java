@@ -22,6 +22,10 @@ public class Locators {
         driver.findElement(By.name("pass")).sendKeys("testing");
 
 
+        // finding element by linkText
+        driver.findElement(By.linkText("¿Has olvidado los datos de la cuenta?")).click();
+
+
 
     }
 }
