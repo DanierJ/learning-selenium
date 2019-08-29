@@ -28,8 +28,30 @@ public class Main {
         System.out.println("\n");
 
 
-        System.out.println("Page source:");
-        System.out.println(chromeDriver.getPageSource());
+       // System.out.println("Page source:");
+       // System.out.println(chromeDriver.getPageSource());
+
+        chromeDriver.get("http://www.facebook.com");
+
+        System.out.println("Current url:");
+        System.out.println(chromeDriver.getCurrentUrl());
+        System.out.println("\n");
+
+
+        System.out.println("Current url:");
+        chromeDriver.navigate().back();
+        System.out.println("\n");
+
+
+
+        System.out.println("Current url:");
+        chromeDriver.navigate().forward();
+        System.out.println("\n");
+
+
+       // System.out.println("Closing browser");
+       // chromeDriver.close(); // Closing the test in the browser - closes current browser
+        // chromeDriver.quit(); // close all the browsers opened by Selenium
 
 
 
