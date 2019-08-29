@@ -15,8 +15,8 @@ public class IE {
 
         IEDriver.get("http://www.google.com");
 
-        System.out.println(IEDriver.getCurrentUrl() );
+        System.out.println(IEDriver.getCurrentUrl());
 
-        // DISM.exe /Online /Add-Capability /CapabilityName:Microsoft.WebDriver~~~~0.0.1.0 para tener el driver 
+        // DISM.exe /Online /Add-Capability /CapabilityName:Microsoft.WebDriver~~~~0.0.1.0 para tener el driver
     }
 }

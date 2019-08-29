@@ -18,7 +18,24 @@ public class Main {
         // Invoking web browser at the specified url
         chromeDriver.get("http://www.google.com");
 
+        System.out.println("Title:");
         // Getting some data from the page.
-        System.out.println( chromeDriver.getTitle());
+        System.out.println( chromeDriver.getTitle()); // Validate if title is correct
+        System.out.println("\n");
+
+        System.out.println("Current url:");
+        System.out.println(chromeDriver.getCurrentUrl()); // Validate if you're in the correct page
+        System.out.println("\n");
+
+
+        System.out.println("Page source:");
+        System.out.println(chromeDriver.getPageSource());
+
+
+
+
+
+
+
     }
 }
