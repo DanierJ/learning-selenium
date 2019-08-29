@@ -40,6 +40,10 @@ public class Locators {
 
         // $("") ---> to validate css selectors given by the browser .
 
+        driver.findElement(By.xpath("//input[@data-testid='royal_login_button']")).click();
+
+        //tagName[@attribute='value'] customizing xpath. 
+
 
 
 
