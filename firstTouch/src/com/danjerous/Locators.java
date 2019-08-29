@@ -33,6 +33,9 @@ public class Locators {
         // finding element by Xpath
         driver.findElement(By.xpath("//*[@id='u_0_l']")).sendKeys("hello");
 
+        // finding element by css selector
+        driver.findElement(By.cssSelector("#u_0_n")).sendKeys("how are you?");
+
 
 
 
