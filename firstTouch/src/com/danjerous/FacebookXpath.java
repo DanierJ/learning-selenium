@@ -6,8 +6,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class FacebookXpath {
     public static void main(String[] args) {
-
-        // System.setProperty(Browser.CHROME.getDriver(), Browser.CHROME.getLocation());
         Browser.CHROME.setSystemProperty();
         WebDriver driver = new ChromeDriver();
 
@@ -22,6 +20,17 @@ public class FacebookXpath {
         // custom css: tagName[attribute='value']
 
         driver.findElement(By.cssSelector("input[id='email']")).sendKeys("danier_1996@hotmail.com");
+
+        // Regular expressions - xpath
+        /*
+           //tagName[contains(@attribute, 'value')]
+
+
+           css equivalent: tagName[attribute*='value']
+
+         */
+
+        driver.findElement(By.xpath("//input[contains(@id, 'pass')]")).sendKeys("1234");
 
 
 
