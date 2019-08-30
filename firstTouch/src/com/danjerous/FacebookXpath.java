@@ -36,7 +36,10 @@ public class FacebookXpath {
         /// parent - child relationship path: parent xpath / child traversing
         // example: //div[@id='lst-c']/div/div[2]/div/input
 
-        
+
+        // //li[@id='tablist1-tab1']/following-sibling::li[3] ----> Traversing the sibling
+
+        // parent::element ----> traversersing to parent 
 
 
 
