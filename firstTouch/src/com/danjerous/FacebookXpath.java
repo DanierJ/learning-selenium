@@ -33,6 +33,12 @@ public class FacebookXpath {
         driver.findElement(By.xpath("//input[contains(@id, 'pass')]")).sendKeys("1234");
 
 
+        /// parent - child relationship path: parent xpath / child traversing
+        // example: //div[@id='lst-c']/div/div[2]/div/input
+
+        
+
+
 
     }
 }
