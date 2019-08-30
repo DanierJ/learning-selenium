@@ -42,7 +42,7 @@ public class Locators {
 
         driver.findElement(By.xpath("//input[@data-testid='royal_login_button']")).click();
 
-        //tagName[@attribute='value'] customizing xpath. 
+        //tagName[@attribute='value'] customizing xpath.
 
 
 
