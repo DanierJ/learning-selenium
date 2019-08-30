@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class StaticDropdown {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         Browser.CHROME.setSystemProperty();
         WebDriver driver = new ChromeDriver();
@@ -21,5 +21,24 @@ public class StaticDropdown {
         select.selectByIndex(2);
         select.selectByVisibleText("INR");
 
+        driver.findElement(By.id("divpaxinfo")).click();
+
+        Thread.sleep(2000L);
+        System.out.println(driver.findElement(By.id("divpaxinfo")).getText());
+
+        multiClick(driver.findElement(By.id("hrefIncAdt")), 4);
+
+
+        driver.findElement(By.id("btnclosepaxoption")).click();
+
+        System.out.println(driver.findElement(By.id("divpaxinfo")).getText());
+
+
+    }
+
+    public static void multiClick (WebElement clickable, int clickNum) {
+        for (int i = 0; i < clickNum; i++) {
+            clickable.click();
+        }
     }
 }
