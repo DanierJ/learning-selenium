@@ -44,6 +44,6 @@ public class FacebookXpath {
         //tagName[text()='value'] identify element based on text. //*[contains(text(),'Selenium')]
 
 
-
+        /// css selectors are faster than xpath.
     }
 }
