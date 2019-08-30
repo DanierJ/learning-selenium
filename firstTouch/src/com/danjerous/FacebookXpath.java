@@ -39,7 +39,9 @@ public class FacebookXpath {
 
         // //li[@id='tablist1-tab1']/following-sibling::li[3] ----> Traversing the sibling
 
-        // parent::element ----> traversersing to parent 
+        // parent::element ----> traversersing to parent
+
+        //tagName[text()='value'] identify element based on text. //*[contains(text(),'Selenium')]
 
 
 
