@@ -59,10 +59,12 @@ public class Dropdowns {
         driver.findElement(By.xpath("//a[contains(text(),'Bhopal (BHO)')]")).click();
         Thread.sleep(2000);
 
-        driver.findElement(By.xpath("(//a[contains(text(),'Chennai (MAA)')])[2]")).click(); // Selecting the second matching found
+      //  driver.findElement(By.xpath("(//a[contains(text(),'Chennai (MAA)')])[2]")).click(); // Selecting the second matching found
 
 
+        /// Parent - child relationship locator
 
-
+        /// //parent//child ---> .parent .child
+        driver.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR']//a[contains(text(),'Chennai (MAA)')]")).click(); // Selecting the second matching found
     }
 }
