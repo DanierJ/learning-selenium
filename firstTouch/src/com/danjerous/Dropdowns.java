@@ -7,11 +7,22 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class StaticDropdown {
-    public static void main(String[] args) throws InterruptedException {
+public class Dropdowns {
 
+    private static WebDriver driver;
+
+    static {
         Browser.CHROME.setSystemProperty();
-        WebDriver driver = new ChromeDriver();
+        driver = new ChromeDriver();
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        staticDropdownTest();
+
+        dynamicDrowdownTest();
+    }
+
+    public static void staticDropdownTest() throws InterruptedException {
 
         driver.get("https://www.spicejet.com/");
         WebElement selectElement = driver.findElement(By.id("ctl00_mainContent_DropDownListCurrency"));
@@ -32,13 +43,26 @@ public class StaticDropdown {
         driver.findElement(By.id("btnclosepaxoption")).click();
 
         System.out.println(driver.findElement(By.id("divpaxinfo")).getText());
-
-
     }
 
     public static void multiClick (WebElement clickable, int clickNum) {
         for (int i = 0; i < clickNum; i++) {
             clickable.click();
         }
+    }
+
+    public static void dynamicDrowdownTest() throws InterruptedException {
+        driver.get("https://www.spicejet.com/");
+
+        driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT")).click();
+
+        driver.findElement(By.xpath("//a[contains(text(),'Bhopal (BHO)')]")).click();
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("(//a[contains(text(),'Chennai (MAA)')])[2]")).click(); // Selecting the second matching found
+
+
+
+
     }
 }
