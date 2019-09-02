@@ -8,5 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="selenium-java-3.141" level="application" />
+    <orderEntry type="library" exported="" name="testng-7.0.0" level="project" />
   </component>
 </module>

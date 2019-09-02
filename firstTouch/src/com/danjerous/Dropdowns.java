@@ -7,6 +7,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+
+import static org.testng.Assert.*;
 
 public class Dropdowns {
 
@@ -18,11 +21,11 @@ public class Dropdowns {
     }
 
     public static void main(String[] args) throws InterruptedException {
-       // staticDropdownTest();
+        staticDropdownTest();
 
        // dynamicDrowdownTest();
 
-        autoSuggestedDropdow();
+       // autoSuggestedDropdow();
     }
 
     public static void staticDropdownTest() throws InterruptedException {
@@ -45,13 +48,8 @@ public class Dropdowns {
 
         driver.findElement(By.id("btnclosepaxoption")).click();
 
-        System.out.println(driver.findElement(By.id("divpaxinfo")).getText());
-    }
+        assertEquals(driver.findElement(By.id("divpaxinfo")).getText(),"5 Adult" );
 
-    public static void multiClick (WebElement clickable, int clickNum) {
-        for (int i = 0; i < clickNum; i++) {
-            clickable.click();
-        }
     }
 
     public static void dynamicDrowdownTest() throws InterruptedException {
@@ -70,7 +68,6 @@ public class Dropdowns {
         /// //parent//child ---> .parent .child
         driver.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR']//a[contains(text(),'Chennai (MAA)')]")).click(); // Selecting the second matching found
     }
-
 
     public static void autoSuggestedDropdow() throws InterruptedException {
         driver.get("https://www.makemytrip.com/");
@@ -98,5 +95,11 @@ public class Dropdowns {
         toCityInput.sendKeys(Keys.ENTER);
 
 
+    }
+
+    public static void multiClick (WebElement clickable, int clickNum) {
+        for (int i = 0; i < clickNum; i++) {
+            clickable.click();
+        }
     }
 }
