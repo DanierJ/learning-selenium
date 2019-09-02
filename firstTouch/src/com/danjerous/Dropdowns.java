@@ -22,8 +22,12 @@ public class Dropdowns {
 
     public static void main(String[] args) throws InterruptedException {
         staticDropdownTest();
+        Thread.sleep(3000);
+        dynamicDrowdownTest();
+        Thread.sleep(3000);
 
-       // dynamicDrowdownTest();
+        handlingCalendar();
+
 
        // autoSuggestedDropdow();
     }
@@ -53,7 +57,7 @@ public class Dropdowns {
     }
 
     public static void dynamicDrowdownTest() throws InterruptedException {
-        driver.get("https://www.spicejet.com/");
+       // driver.get("https://www.spicejet.com/");
 
         driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT")).click();
 
@@ -101,5 +105,29 @@ public class Dropdowns {
         for (int i = 0; i < clickNum; i++) {
             clickable.click();
         }
+    }
+
+    public static void handlingCalendar() {
+        driver.findElement(By.cssSelector(".ui-state-default.ui-state-highlight.ui-state-active")).click();
+
+       /* if (driver.findElement(By.id("ctl00_mainContent_view_date2")).isEnabled()) { // isEnabled possibly doesn't work on few pages due to how it was developed.
+
+        } else {
+            driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1")).click();
+        }
+
+        driver.findElement(By.id("ctl00_mainContent_view_date2")).click();
+        */
+
+       if(driver.findElement(By.id("Div1")).getAttribute("style").contains("0.5")) {
+           driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1")).click();
+       }
+
+       driver.findElement(By.id("ctl00_mainContent_view_date2")).click();
+
+       driver.findElement(By.xpath("//td[@data-month='8']//a[text()='22']")).click();
+
+       driver.findElement(By.id("ctl00_mainContent_btn_FindFlights")).click();
+
     }
 }
