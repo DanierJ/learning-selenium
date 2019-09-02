@@ -2,6 +2,7 @@ package com.danjerous;
 
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,9 +18,11 @@ public class Dropdowns {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        staticDropdownTest();
+       // staticDropdownTest();
 
-        dynamicDrowdownTest();
+       // dynamicDrowdownTest();
+
+        autoSuggestedDropdow();
     }
 
     public static void staticDropdownTest() throws InterruptedException {
@@ -66,5 +69,34 @@ public class Dropdowns {
 
         /// //parent//child ---> .parent .child
         driver.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR']//a[contains(text(),'Chennai (MAA)')]")).click(); // Selecting the second matching found
+    }
+
+
+    public static void autoSuggestedDropdow() throws InterruptedException {
+        driver.get("https://www.makemytrip.com/");
+
+        WebElement fromCityInput = driver.findElement(By.id("fromCity"));
+
+        fromCityInput.click();
+        driver.findElement(By.xpath("//input[@placeholder='From']")).clear();
+
+        fromCityInput.sendKeys("MUM");
+        Thread.sleep(2000);
+        fromCityInput.sendKeys(Keys.ENTER);
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("//*[contains(text(), 'Mumbai')]")).click();
+
+        WebElement toCityContainer = driver.findElement(By.xpath("//div[contains(@class,'fsw_inputBox searchToCity inactiveWidget')]//label"));
+
+        Thread.sleep(2000);
+        WebElement toCityInput = driver.findElement(By.id("toCity"));
+
+        toCityContainer.click();
+        Thread.sleep(2000);
+        toCityInput.sendKeys(Keys.ARROW_DOWN);
+        toCityInput.sendKeys(Keys.ENTER);
+
+
     }
 }
