@@ -61,10 +61,19 @@ public class TrickyExamples {
 
         driver.findElement(By.id("selector")).sendKeys("ben");
 
-        boolean flag = true;
+        // Javascript DOM can extract hidden elements
+        // because selenium cannot identify hidden elements
+        // investigate the properties of object if it have any hidden text
+        /// How to use javascript with java --> JavascriptExecutor.
         JavascriptExecutor js = (JavascriptExecutor) driver;
+
         String script = "return document.getElementById(\"id\").value";
-        while(flag) {
+        String text = ((String)js.executeScript(script));
+
+        System.out.println(text);
+        String firstText = text;
+
+        while(!text.equalsIgnoreCase("comparison")) {
             driver.findElement(By.id("selector")).sendKeys(Keys.DOWN);
 
             /*if ( driver.findElement(By.id("selector")).getText().equalsIgnoreCase("comparision")) {
@@ -72,16 +81,25 @@ public class TrickyExamples {
                 System.out.println("FOUND!!");
             }*/
 
-            if (((String)js.executeScript(script)).equalsIgnoreCase("comparison")) {
-                flag = false;
-                System.out.println("FOUND!!");
-            }
+            text = ((String)js.executeScript(script));
+            System.out.println(text);
+
         }
 
-        // Javascript DOM can extract hidden elements
-        // because selenium cannot identify hidden elements
-        // investigate the properties of object if it have any hidden text
-        /// How to use javascript with java --> JavascriptExecutor.
+        do {
+            driver.findElement(By.id("selector")).sendKeys(Keys.DOWN);
+
+            if (text.equalsIgnoreCase("comparison")){
+
+                System.out.println("FOUND!");
+            }
+
+        } while (!text.equalsIgnoreCase("comparison"));
+
+
+
+
+
 
 
 
