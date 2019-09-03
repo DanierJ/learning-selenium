@@ -34,6 +34,7 @@ public class ActionsDemo {
                 .keyDown(Keys.SHIFT)
                 .sendKeys("playstation")
                 .doubleClick()
+                .contextClick()
                 .build()
                 .perform();
     }
