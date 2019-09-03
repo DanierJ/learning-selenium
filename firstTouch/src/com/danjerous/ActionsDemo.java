@@ -27,12 +27,13 @@ public class ActionsDemo {
                .moveToElement(driver.findElement(By.id("nav-link-accountList")))
                .build()
                .perform();
-    
+
         actions
                 .moveToElement(driver.findElement(By.id("twotabsearchtextbox")))
                 .click()
                 .keyDown(Keys.SHIFT)
                 .sendKeys("playstation")
+                .doubleClick()
                 .build()
                 .perform();
     }
