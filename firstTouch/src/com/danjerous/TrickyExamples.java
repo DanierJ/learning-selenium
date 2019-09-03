@@ -1,8 +1,6 @@
 package com.danjerous;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class TrickyExamples {
@@ -43,6 +41,50 @@ public class TrickyExamples {
         driver.switchTo().defaultContent();
 
         return i;
+    }
+
+
+    public static void autosuggestive() {
+        driver.get("hh");
+
+        // 1. Get the input
+
+        // 2. Send the keys
+
+        // 3. loop through all the suggestions.
+
+        // 4. compare the text displayed on the input.
+
+        // 5. if found break else continue.
+
+        driver.findElement(By.id("selector")).click();
+
+        driver.findElement(By.id("selector")).sendKeys("ben");
+
+        boolean flag = true;
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        String script = "return document.getElementById(\"id\").value";
+        while(flag) {
+            driver.findElement(By.id("selector")).sendKeys(Keys.DOWN);
+
+            /*if ( driver.findElement(By.id("selector")).getText().equalsIgnoreCase("comparision")) {
+                flag = false;
+                System.out.println("FOUND!!");
+            }*/
+
+            if (((String)js.executeScript(script)).equalsIgnoreCase("comparison")) {
+                flag = false;
+                System.out.println("FOUND!!");
+            }
+        }
+
+        // Javascript DOM can extract hidden elements
+        // because selenium cannot identify hidden elements
+        // investigate the properties of object if it have any hidden text
+        /// How to use javascript with java --> JavascriptExecutor.
+
+
+
     }
 
 }

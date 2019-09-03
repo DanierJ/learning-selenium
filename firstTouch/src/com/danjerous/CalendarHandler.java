@@ -35,7 +35,7 @@ public class CalendarHandler {
         // Likewise, when searching for the month/year you need to loop through the elements until you find the date.
 
 
-        // nahu way:
+        // rahul way:
 
         driver.findElement(By.xpath("//*[@id='travel_date']")).click();
 
