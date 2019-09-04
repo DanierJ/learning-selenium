@@ -20,7 +20,7 @@ public class CalendarHandler {
 
 
     public static void main(String[] args) {
-
+        handlingCalendar();
     }
 
     public static void handlingCalendar() {
@@ -40,7 +40,7 @@ public class CalendarHandler {
         driver.findElement(By.xpath("//*[@id='travel_date']")).click();
 
 
-        while (!driver.findElement(By.cssSelector("[class='datepicker-days'][class='datepicker-switch']")).getText().contains("April")) {
+        while (!driver.findElement(By.cssSelector("[class='datepicker-days'] [class='datepicker-switch']")).getText().contains("April")) {
             driver.findElement(By.cssSelector("[class='datepicker-days'] th[class='next']")).click();
         }
 

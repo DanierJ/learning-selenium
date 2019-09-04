@@ -73,6 +73,8 @@ public class Scope {
 
         getWindowsTitle();
 
+        driver.quit();
+
     }
 
     // Opening multiple links on different tabs
@@ -120,6 +122,8 @@ public class Scope {
             driver.switchTo().window(id);
             System.out.println(driver.getTitle());
         });
+
+        driver.getTitle();
     }
 
 }

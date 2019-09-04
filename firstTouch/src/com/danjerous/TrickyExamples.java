@@ -12,8 +12,8 @@ public class TrickyExamples {
 
     }
 
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws InterruptedException {
+        autosuggestive();
     }
 
     public static void captcha() {
@@ -44,8 +44,8 @@ public class TrickyExamples {
     }
 
 
-    public static void autosuggestive() {
-        driver.get("hh");
+    public static void autosuggestive() throws InterruptedException {
+        driver.get("https://ksrtc.in/oprs-web/");
 
         // 1. Get the input
 
@@ -57,9 +57,10 @@ public class TrickyExamples {
 
         // 5. if found break else continue.
 
-        driver.findElement(By.id("selector")).click();
+        driver.findElement(By.id("fromPlaceName")).click();
 
-        driver.findElement(By.id("selector")).sendKeys("ben");
+        driver.findElement(By.id("fromPlaceName")).sendKeys("ben");
+
 
         // Javascript DOM can extract hidden elements
         // because selenium cannot identify hidden elements
@@ -67,41 +68,36 @@ public class TrickyExamples {
         /// How to use javascript with java --> JavascriptExecutor.
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
-        String script = "return document.getElementById(\"id\").value";
-        String text = ((String)js.executeScript(script));
+        String script = "return document.getElementById(\"fromPlaceName\").value";
+        String text = "";
 
-        System.out.println(text);
-        String firstText = text;
 
-        while(!text.equalsIgnoreCase("comparison")) {
+      /*  while(!text.equalsIgnoreCase("comparison")) {
             driver.findElement(By.id("selector")).sendKeys(Keys.DOWN);
 
             /*if ( driver.findElement(By.id("selector")).getText().equalsIgnoreCase("comparision")) {
                 flag = false;
                 System.out.println("FOUND!!");
-            }*/
+            }
 
             text = ((String)js.executeScript(script));
             System.out.println(text);
 
-        }
+        }*/
 
         do {
-            driver.findElement(By.id("selector")).sendKeys(Keys.DOWN);
+            Thread.sleep(1000);
+            driver.findElement(By.id("fromPlaceName")).sendKeys(Keys.DOWN);
+            text = ((String)js.executeScript(script));
 
-            if (text.equalsIgnoreCase("comparison")){
+            System.out.println(text);
+
+            if (text.equalsIgnoreCase("BENGALURU")){
 
                 System.out.println("FOUND!");
             }
 
-        } while (!text.equalsIgnoreCase("comparison"));
-
-
-
-
-
-
-
+        } while (!text.equalsIgnoreCase("BENGALURU"));
 
     }
 
