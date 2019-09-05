@@ -2,6 +2,7 @@ package com.danjerous.testng;
 
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class BasicTNGLogin {
@@ -32,10 +33,11 @@ public class BasicTNGLogin {
 
     }
 
+    @Parameters({"carLoanUrl"})
     @Test(groups = {"Smoke"})
-    public void loginAPICarLoan() {
+    public void loginAPICarLoan(String url) {
         // REST API automation
-        System.out.println("Login car rest api ");
+        System.out.println("Login car rest api: " + url);
     }
 
     @BeforeTest

@@ -2,6 +2,7 @@ package com.danjerous.testng;
 
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class BasicTNGLoginHome {
@@ -11,11 +12,11 @@ public class BasicTNGLoginHome {
         System.out.println("I run before any test on any test. [Before Suite]");
     }
 
-
+    @Parameters({"personalLoanUrl"})
     @Test
-    public void webLoginHomeLoan() {
+    public void webLoginHomeLoan(String url) {
         // Selenium
-        System.out.println("Web login home");
+        System.out.println("Web login home, url: " + url);
     }
 
     @Test

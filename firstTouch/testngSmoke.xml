@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Loan Department">
+    <parameter name="URL" value="qaclickacademy.com"/>
    <test name="Regression">
        <groups>
            <run>
@@ -13,6 +14,7 @@
            <class name="com.danjerous.testng.BasicsTNGG"/>
            <class name="com.danjerous.testng.BasicTNGLogin"/>
            <class name="com.danjerous.testng.BasicTNGLoginHome"/>
+           <class name="com.danjerous.testng.BasicTNGParams" />
        </classes>
    </test>
 </suite>

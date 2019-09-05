@@ -2,6 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Loan Department">
     <test name="Personal loan">
+        <parameter name="personalLoanUrl" value="personalLoan.com"/>
         <classes>
             <class name="com.danjerous.testng.BasicsTNG">
                 <methods>
@@ -14,6 +15,7 @@
         </classes>
     </test>
     <test name="Car Loan">
+        <parameter name="carLoanUrl" value="carloan.com"/>
         <classes>
             <class name="com.danjerous.testng.BasicTNGLogin">
                 <methods>
