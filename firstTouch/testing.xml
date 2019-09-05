@@ -3,14 +3,22 @@
 <suite name="Loan Department">
     <test name="Personal loan">
         <classes>
-            <class name="com.danjerous.testng.BasicsTNG"/>
+            <class name="com.danjerous.testng.BasicsTNG">
+                <methods>
+                    <include name="anotherTest"/>
+                </methods>
+            </class>
             <class name="com.danjerous.testng.BasicsTNGG"/>
             <class name="com.danjerous.testng.BasicTNGLoginHome"/>
         </classes>
     </test>
     <test name="Car Loan">
         <classes>
-            <class name="com.danjerous.testng.BasicTNGLogin"/>
+            <class name="com.danjerous.testng.BasicTNGLogin">
+                <methods>
+                    <exclude name="mobileLoginCarLoan" />
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
