@@ -25,7 +25,7 @@ public class BasicTNGLoginHome {
 
     }
 
-    @Test
+    @Test(groups = {"Smoke"})
     public void loginAPIHomeLoan() {
         // REST API automation
         System.out.println("Login home rest api");

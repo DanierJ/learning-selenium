@@ -32,7 +32,7 @@ public class BasicTNGLogin {
 
     }
 
-    @Test
+    @Test(groups = {"Smoke"})
     public void loginAPICarLoan() {
         // REST API automation
         System.out.println("Login car rest api ");

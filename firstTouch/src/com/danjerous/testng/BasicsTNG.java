@@ -15,7 +15,7 @@ public class BasicsTNG {
         System.out.println("I run before any method on this class " + this.getClass().getName() +". [Before Method]");
     }
 
-    @Test
+    @Test(groups = {"Smoke"})
     public void runningWithoutJavaCompiler() {
         System.out.println("Hello world");
     }
