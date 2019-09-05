@@ -20,12 +20,18 @@ public class BasicsTNG {
         System.out.println("Hello world");
     }
 
-    @Test
+    @Test(dependsOnMethods = "runningWithoutJavaCompiler") // Tells what methods depends on to be executed.
     public void anotherTest() {
         Assert.assertTrue(true);
     }
-    @Test
+
+    @Test(enabled = false) // Skip the method when executing.
     public void anotherTherTest() {
+        System.out.println("anotherTherTest");
+    }
+
+    @Test(timeOut = 3000) // It will wait for failing until the limit is reached.
+    public void takingTooMuchTime() {
         System.out.println("anotherTherTest");
     }
 
