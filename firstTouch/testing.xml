@@ -3,6 +3,7 @@
 <suite name="Loan Department">
     <test name="Personal loan">
         <parameter name="personalLoanUrl" value="personalLoan.com"/>
+        <parameter name="username" value="123456"/>
         <classes>
             <class name="com.danjerous.testng.BasicsTNG">
                 <methods>

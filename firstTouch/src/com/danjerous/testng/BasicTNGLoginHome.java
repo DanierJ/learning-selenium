@@ -12,11 +12,11 @@ public class BasicTNGLoginHome {
         System.out.println("I run before any test on any test. [Before Suite]");
     }
 
-    @Parameters({"personalLoanUrl"})
+    @Parameters({"personalLoanUrl", "username"})
     @Test
-    public void webLoginHomeLoan(String url) {
+    public void webLoginHomeLoan(String url, String username) {
         // Selenium
-        System.out.println("Web login home, url: " + url);
+        System.out.println("Web login home, url: " + url + ", username: " + username);
     }
 
     @Test

@@ -34,7 +34,7 @@ public class BasicTNGLogin {
     }
 
     @Parameters({"carLoanUrl"})
-    @Test(groups = {"Smoke"})
+   // @Test(groups = {"Smoke"})
     public void loginAPICarLoan(String url) {
         // REST API automation
         System.out.println("Login car rest api: " + url);
