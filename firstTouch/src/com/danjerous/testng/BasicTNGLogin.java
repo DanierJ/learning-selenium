@@ -1,5 +1,7 @@
 package com.danjerous.testng;
 
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class BasicTNGLogin {
@@ -34,5 +36,15 @@ public class BasicTNGLogin {
     public void loginAPICarLoan() {
         // REST API automation
         System.out.println("Login car rest api ");
+    }
+
+    @BeforeTest
+    public void preRequisite() {
+        System.out.println("I run before any test on Car Loan.");
+    }
+
+    @AfterTest
+    public void postRequisite() {
+        System.out.println("I run after any test on Car Loan.");
     }
 }
