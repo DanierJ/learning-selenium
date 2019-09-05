@@ -5,7 +5,8 @@
         <classes>
             <class name="com.danjerous.testng.BasicsTNG">
                 <methods>
-                    <include name="anotherTest"/>
+                    <include name="runningWithoutJavaCompiler"/>
+                    <include name="anotherTherTest"/>
                 </methods>
             </class>
             <class name="com.danjerous.testng.BasicsTNGG"/>

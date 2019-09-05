@@ -1,8 +1,17 @@
 package com.danjerous.testng;
 
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 public class BasicTNGLoginHome {
+
+    @BeforeSuite
+    public void generalPreRequisite() {
+        System.out.println("I run before any test on any test. [Before Suite]");
+    }
+
+
     @Test
     public void webLoginHomeLoan() {
         // Selenium
@@ -19,6 +28,11 @@ public class BasicTNGLoginHome {
     @Test
     public void loginAPIHomeLoan() {
         // REST API automation
-        System.out.println("Login home rest api ");
+        System.out.println("Login home rest api");
+    }
+
+    @AfterSuite
+    public void generalPostRequisite() {
+        System.out.println("I run after any test on any test. [After Suite]");
     }
 }

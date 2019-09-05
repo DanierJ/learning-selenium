@@ -40,11 +40,11 @@ public class BasicTNGLogin {
 
     @BeforeTest
     public void preRequisite() {
-        System.out.println("I run before any test on Car Loan.");
+        System.out.println("I run before any test on Car Loan. [Before Test]");
     }
 
     @AfterTest
     public void postRequisite() {
-        System.out.println("I run after any test on Car Loan.");
+        System.out.println("I run after any test on Car Loan. [After Test]");
     }
 }
