@@ -16,7 +16,8 @@
         <classes>
             <class name="com.danjerous.testng.BasicTNGLogin">
                 <methods>
-                    <exclude name="mobileLoginCarLoan" />
+                    <!--<exclude name="mobileLoginCarLoan" />-->
+                    <exclude name="mobile.*" />
                 </methods>
             </class>
         </classes>
