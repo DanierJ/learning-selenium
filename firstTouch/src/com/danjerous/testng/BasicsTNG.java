@@ -5,6 +5,11 @@ import org.testng.annotations.*;
 
 public class BasicsTNG {
 
+    @BeforeClass
+    public void classPreRequisite() {
+        System.out.println("I run before any method on this class. [Before Class]");
+    }
+
     @BeforeMethod
     public void methodPreRequisite() {
         System.out.println("I run before any method on this class " + this.getClass().getName() +". [Before Method]");
