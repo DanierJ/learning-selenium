@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="6" total="12" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Loan Department" duration-ms="53" started-at="2019-09-05T18:11:13 COT" finished-at="2019-09-05T18:11:13 COT">
+    <groups>
+      <group name="Smoke">
+        <method signature="BasicTNGLoginHome.loginAPIHomeLoan()[pri:0, instance:com.danjerous.testng.BasicTNGLoginHome@5afa04c]" name="loginAPIHomeLoan" class="com.danjerous.testng.BasicTNGLoginHome"/>
+        <method signature="BasicsTNG.runningWithoutJavaCompiler()[pri:0, instance:com.danjerous.testng.BasicsTNG@6ea12c19]" name="runningWithoutJavaCompiler" class="com.danjerous.testng.BasicsTNG"/>
+      </group> <!-- Smoke -->
+    </groups>
+    <test name="Car Loan" duration-ms="37" started-at="2019-09-05T18:11:13 COT" finished-at="2019-09-05T18:11:13 COT">
+      <class name="com.danjerous.testng.BasicsTNG">
+        <test-method status="PASS" signature="thirdAfterSuite()[pri:0, instance:com.danjerous.testng.BasicsTNG@6ea12c19]" name="thirdAfterSuite" is-config="true" duration-ms="0" started-at="2019-09-05T18:11:14 COT" finished-at="2019-09-05T18:11:14 COT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- thirdAfterSuite -->
+      </class> <!-- com.danjerous.testng.BasicsTNG -->
+      <class name="com.danjerous.testng.BasicTNGLoginHome">
+        <test-method status="PASS" signature="generalPreRequisite()[pri:0, instance:com.danjerous.testng.BasicTNGLoginHome@5afa04c]" name="generalPreRequisite" is-config="true" duration-ms="16" started-at="2019-09-05T18:11:13 COT" finished-at="2019-09-05T18:11:13 COT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generalPreRequisite -->
+        <test-method status="PASS" signature="generalPostRequisite()[pri:0, instance:com.danjerous.testng.BasicTNGLoginHome@5afa04c]" name="generalPostRequisite" is-config="true" duration-ms="0" started-at="2019-09-05T18:11:14 COT" finished-at="2019-09-05T18:11:14 COT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generalPostRequisite -->
+      </class> <!-- com.danjerous.testng.BasicTNGLoginHome -->
+      <class name="com.danjerous.testng.BasicsTNGG">
+        <test-method status="PASS" signature="testingTwoAfterSuite()[pri:0, instance:com.danjerous.testng.BasicsTNGG@6a024a67]" name="testingTwoAfterSuite" is-config="true" duration-ms="1" started-at="2019-09-05T18:11:14 COT" finished-at="2019-09-05T18:11:14 COT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testingTwoAfterSuite -->
+      </class> <!-- com.danjerous.testng.BasicsTNGG -->
+      <class name="com.danjerous.testng.BasicTNGLogin">
+        <test-method status="PASS" signature="preRequisite()[pri:0, instance:com.danjerous.testng.BasicTNGLogin@7f9a81e8]" name="preRequisite" is-config="true" duration-ms="0" started-at="2019-09-05T18:11:13 COT" finished-at="2019-09-05T18:11:13 COT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preRequisite -->
+        <test-method status="PASS" signature="webLoginCarLoan()[pri:0, instance:com.danjerous.testng.BasicTNGLogin@7f9a81e8]" name="webLoginCarLoan" duration-ms="6" started-at="2019-09-05T18:11:13 COT" finished-at="2019-09-05T18:11:13 COT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- webLoginCarLoan -->
+        <test-method status="PASS" signature="postRequisite()[pri:0, instance:com.danjerous.testng.BasicTNGLogin@7f9a81e8]" name="postRequisite" is-config="true" duration-ms="0" started-at="2019-09-05T18:11:13 COT" finished-at="2019-09-05T18:11:13 COT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postRequisite -->
+      </class> <!-- com.danjerous.testng.BasicTNGLogin -->
+    </test> <!-- Car Loan -->
+    <test name="Personal loan" duration-ms="53" started-at="2019-09-05T18:11:13 COT" finished-at="2019-09-05T18:11:13 COT">
+      <class name="com.danjerous.testng.BasicsTNG">
+        <test-method status="PASS" signature="preRequisite()[pri:0, instance:com.danjerous.testng.BasicsTNG@6ea12c19]" name="preRequisite" is-config="true" duration-ms="0" started-at="2019-09-05T18:11:13 COT" finished-at="2019-09-05T18:11:13 COT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preRequisite -->
+        <test-method status="PASS" signature="classPreRequisite()[pri:0, instance:com.danjerous.testng.BasicsTNG@6ea12c19]" name="classPreRequisite" is-config="true" duration-ms="0" started-at="2019-09-05T18:11:13 COT" finished-at="2019-09-05T18:11:13 COT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- classPreRequisite -->
+        <test-method status="PASS" signature="methodPreRequisite()[pri:0, instance:com.danjerous.testng.BasicsTNG@6ea12c19]" name="methodPreRequisite" is-config="true" duration-ms="6" started-at="2019-09-05T18:11:13 COT" finished-at="2019-09-05T18:11:13 COT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodPreRequisite -->
+        <test-method status="PASS" signature="runningWithoutJavaCompiler()[pri:0, instance:com.danjerous.testng.BasicsTNG@6ea12c19]" name="runningWithoutJavaCompiler" duration-ms="0" started-at="2019-09-05T18:11:13 COT" finished-at="2019-09-05T18:11:13 COT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runningWithoutJavaCompiler -->
+        <test-method status="PASS" signature="postRequisite()[pri:0, instance:com.danjerous.testng.BasicsTNG@6ea12c19]" name="postRequisite" is-config="true" duration-ms="0" started-at="2019-09-05T18:11:13 COT" finished-at="2019-09-05T18:11:13 COT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postRequisite -->
+      </class> <!-- com.danjerous.testng.BasicsTNG -->
+      <class name="com.danjerous.testng.BasicTNGLoginHome">
+        <test-method status="PASS" signature="loginAPIHomeLoan()[pri:0, instance:com.danjerous.testng.BasicTNGLoginHome@5afa04c]" name="loginAPIHomeLoan" duration-ms="0" started-at="2019-09-05T18:11:13 COT" finished-at="2019-09-05T18:11:13 COT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAPIHomeLoan -->
+        <test-method status="PASS" signature="mobileLoginHomeLoan()[pri:0, instance:com.danjerous.testng.BasicTNGLoginHome@5afa04c]" name="mobileLoginHomeLoan" duration-ms="0" started-at="2019-09-05T18:11:13 COT" finished-at="2019-09-05T18:11:13 COT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mobileLoginHomeLoan -->
+        <test-method status="PASS" signature="webLoginHomeLoan(java.lang.String, java.lang.String)[pri:0, instance:com.danjerous.testng.BasicTNGLoginHome@5afa04c]" name="webLoginHomeLoan" duration-ms="0" started-at="2019-09-05T18:11:13 COT" finished-at="2019-09-05T18:11:13 COT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[personalLoan.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- webLoginHomeLoan -->
+      </class> <!-- com.danjerous.testng.BasicTNGLoginHome -->
+      <class name="com.danjerous.testng.BasicsTNGG">
+        <test-method status="PASS" signature="testFromAnotherClass()[pri:0, instance:com.danjerous.testng.BasicsTNGG@6a024a67]" name="testFromAnotherClass" duration-ms="0" started-at="2019-09-05T18:11:13 COT" finished-at="2019-09-05T18:11:13 COT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFromAnotherClass -->
+      </class> <!-- com.danjerous.testng.BasicsTNGG -->
+    </test> <!-- Personal loan -->
+  </suite> <!-- Loan Department -->
+</testng-results>
