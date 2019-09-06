@@ -18,7 +18,7 @@ public class GlobalParams {
    private WebDriver driver;
 
     @Test
-    public void Login() throws IOException {
+    public void login() throws IOException {
 
         Properties properties = new Properties();
         FileInputStream fileInputStream = new FileInputStream(new File("C:\\Users\\Danier Javid\\Desktop\\Courses\\selenium\\firstTouch\\src\\com\\danjerous\\globalparam\\datadriver.properties")); // To get the input file
