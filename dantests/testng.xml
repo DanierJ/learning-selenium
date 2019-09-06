@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Loan Department" parallel="tests" thread-count="2">
+    <!--parallel="classes" thread-count="2"-->
+    <test name="Personal loan">
+        <classes>
+            <class name="com.danjerous.qa.AppiumTest">
+            </class>
+            <class name="com.danjerous.qa.RESTAPITest"/>
+            <!--<class name="com.danjerous.qa.SeleniumTest"/>-->
+        </classes>
+    </test>
+</suite>
