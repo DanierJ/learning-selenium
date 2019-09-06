@@ -8,5 +8,5 @@ public class WebDriverTest extends GlobalParams{
     public void reusableComponentTest() {
         System.out.println("I ran after calling Login.");
     }
-    
+
 }
