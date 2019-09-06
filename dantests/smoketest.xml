@@ -6,8 +6,8 @@
         <classes>
             <class name="com.danjerous.qa.AppiumTest">
             </class>
-            <class name="com.danjerous.qa.RESTAPITest"/>
-            <class name="com.danjerous.qa.SeleniumTest"/>
+            <!--<class name="com.danjerous.qa.RESTAPITest"/>-->
+            <!--<class name="com.danjerous.qa.SeleniumTest"/>-->
         </classes>
     </test>
 </suite>
