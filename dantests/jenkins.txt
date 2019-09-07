@@ -1,0 +1,10 @@
+1.Descarga el war
+2.Navega hasta su ubicación.
+3.Ejecuta este comando: java -jar jenkins.war --httpPort=[port] (funciona con java 8 y 11)
+4.Logueate
+5.Instala los plugins
+6.Administra Jenkins (jdk y maven)
+7.Crea nueva tarea (selecciona trabajo estilo libre)
+8.Establece el comando maven
+9.Selecciona los reportes de testng
+10.Ejecuta las pruebas. 
