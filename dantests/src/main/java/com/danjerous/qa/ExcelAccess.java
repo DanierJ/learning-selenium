@@ -16,6 +16,24 @@ public class ExcelAccess {
 
         return new XSSFWorkbook(fs);
     }
+    
+    public XSSFSheet getExcelSheet(XSSFWorkbook workbook, String sheetName) {
+        int sheetCount = workbook.getNumberOfSheets();
 
-   
+        for (int i = 0; i < sheetCount; i++) {
+            if (workbook.getSheetName(i).equalsIgnoreCase(sheetName)) {
+                XSSFSheet sheet = workbook.getSheetAt(i);
+
+                return sheet;
+            }
+        }
+
+        return null;
+    }
+
+    public File fileBuilder(String filePath) {
+        return new File(filePath);
+    }
+
+
 }
