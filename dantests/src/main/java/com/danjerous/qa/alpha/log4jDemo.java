@@ -12,7 +12,7 @@ public class log4jDemo {
 
         if (5>4)
             log.info("Object is present.");
-        log.error("Object is not present.");
+        log.error("Object is not presentss.");
 
         log.fatal("This is fatal.");
 
