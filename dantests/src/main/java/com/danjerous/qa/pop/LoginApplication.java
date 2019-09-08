@@ -15,8 +15,13 @@ public class LoginApplication {
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://mail.rediff.com/cgi-bin/login.cgi");
-        
 
+        RediffLoginPage rd = new RediffLoginPage(driver);
+
+        rd.emailId().sendKeys("dan");
+        rd.password().sendKeys("123");
+        rd.submit().click();
+        rd.home().click();
     }
 
 }
