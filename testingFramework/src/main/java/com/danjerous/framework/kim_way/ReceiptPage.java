@@ -13,6 +13,10 @@ public class ReceiptPage extends PageObject {
         super(driver);
     }
 
+    public boolean isInitialized() {
+        return header.isDisplayed();
+    }
+
     public String confirmationHeader() {
         return header.getText();
     }

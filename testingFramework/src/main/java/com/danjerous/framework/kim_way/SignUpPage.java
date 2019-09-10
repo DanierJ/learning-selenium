@@ -7,6 +7,11 @@ import org.openqa.selenium.support.FindBy;
 public class SignUpPage extends PageObject {
     public SignUpPage(WebDriver driver) {
         super(driver);
+      //  Assert.assertTrue(firstName.isDisplayed());
+    }
+
+    public boolean isInitialized() {
+        return firstName.isDisplayed();
     }
 
     @FindBy(id = "firstName")
