@@ -3,6 +3,7 @@ package com.danjerous.framework;
 import com.danjerous.framework.page_objects.LandingPage;
 import com.danjerous.framework.page_objects.LoginPage;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -10,8 +11,9 @@ import java.io.IOException;
 public class HomePage extends Base {
     private WebDriver driver;
 
-    @Test
-    public void basePageNavigation() throws IOException {
+
+    @Test(dataProvider = "getData")
+    public void basePageNavigation(String username, String password) throws IOException {
         driver = initializeDriver();
         driver.get("http://www.qaclickacademy.com/");
 
@@ -21,9 +23,20 @@ public class HomePage extends Base {
 
         LoginPage loginPage = new LoginPage(driver);
 
-        loginPage.getEmail().sendKeys("test@test.com");
-        loginPage.getPassword().sendKeys("test");
+        loginPage.getEmail().sendKeys(username);
+        loginPage.getPassword().sendKeys(password);
 
         loginPage.getLogin().click();
+    }
+
+    @DataProvider
+    public Object[][] getData() {
+        // rows: how many data, col: how many parameters
+        return new Object[][] {
+                {"dani", "dani123"},
+                {"javi", "javi123"},
+                {"marti", "marti123"},
+                {"cami", "cami123"}
+        };
     }
 }
