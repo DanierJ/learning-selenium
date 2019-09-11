@@ -10,11 +10,17 @@ public class LandingPage {
 
     private By signIn = By.cssSelector("a[href*='sign_in']");
 
+    private By title = By.xpath("//h2[contains(text(),'Featured Courses')]");
+
     public LandingPage(WebDriver driver) {
         this.driver = driver;
     }
 
     public WebElement signIn() {
         return this.driver.findElement(signIn);
+    }
+
+    public WebElement getTitle() {
+        return this.driver.findElement(title);
     }
 }
