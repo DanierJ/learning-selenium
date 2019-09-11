@@ -1,6 +1,7 @@
 package com.danjerous.framework;
 
 import com.danjerous.framework.page_objects.LandingPage;
+import com.danjerous.framework.page_objects.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
@@ -17,5 +18,12 @@ public class HomePage extends Base {
         LandingPage landingPage = new LandingPage(driver);
 
         landingPage.signIn().click();
+
+        LoginPage loginPage = new LoginPage(driver);
+
+        loginPage.getEmail().sendKeys("test@test.com");
+        loginPage.getPassword().sendKeys("test");
+
+        loginPage.getLogin().click();
     }
 }
