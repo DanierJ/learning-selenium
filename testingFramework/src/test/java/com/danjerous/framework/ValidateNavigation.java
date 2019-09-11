@@ -1,6 +1,6 @@
 package com.danjerous.framework;
 
-import com.danjerous.framework.page_objects.NavigationPage;
+import com.danjerous.framework.page_objects.LandingPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -14,13 +14,12 @@ public class ValidateNavigation extends Base {
     @Test
     public void navigationVisibilityTest() throws IOException {
         driver = initializeDriver();
-        driver.get("http://www.qaclickacademy.com/");
+        driver.get(getProperty("url"));
 
-        NavigationPage navigationPage = new NavigationPage(driver);
+        LandingPage landingPage = new LandingPage(driver);
 
 
-        Assert.assertTrue(navigationPage.getNavigation().isDisplayed());
-
+        Assert.assertTrue(landingPage.getNavigationBar().isDisplayed());
 
     }
 }

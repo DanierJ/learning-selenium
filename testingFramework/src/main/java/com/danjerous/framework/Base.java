@@ -15,15 +15,10 @@ public class Base {
 
     private WebDriver driver;
 
+
     public WebDriver initializeDriver() throws IOException {
-        Properties properties = new Properties();
 
-        FileInputStream fileInputStream = new FileInputStream(new File("C:\\Users\\Danier Javid\\Desktop\\Courses\\selenium\\testingFramework\\src\\main\\java\\com\\danjerous\\framework\\class_resources\\data.properties"));
-        properties.load(fileInputStream);
-
-       // setDriver(properties.getProperty("browser"));
-
-        return setDriver(properties.getProperty("browser"));
+        return setDriver(getProperty("browser"));
 
     }
 
@@ -42,5 +37,15 @@ public class Base {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         return driver;
+    }
+
+
+    public String getProperty(String property) throws IOException {
+        Properties properties = new Properties();
+
+        FileInputStream fileInputStream = new FileInputStream(new File("C:\\Users\\Danier Javid\\Desktop\\Courses\\selenium\\testingFramework\\src\\main\\java\\com\\danjerous\\framework\\class_resources\\data.properties"));
+        properties.load(fileInputStream);
+
+        return  properties.getProperty(property);
     }
 }

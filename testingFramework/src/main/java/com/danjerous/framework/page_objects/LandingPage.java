@@ -12,6 +12,8 @@ public class LandingPage {
 
     private By title = By.xpath("//h2[contains(text(),'Featured Courses')]");
 
+    private By navigationBar = By.xpath("//ul[@class='nav navbar-nav navbar-right']");
+
     public LandingPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -22,5 +24,9 @@ public class LandingPage {
 
     public WebElement getTitle() {
         return this.driver.findElement(title);
+    }
+
+    public WebElement getNavigationBar() {
+        return this.driver.findElement(navigationBar);
     }
 }

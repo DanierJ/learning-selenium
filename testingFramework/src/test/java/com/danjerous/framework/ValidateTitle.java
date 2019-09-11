@@ -15,7 +15,7 @@ public class ValidateTitle extends Base {
     @Test
     public void basePageNavigation() throws IOException {
         driver = initializeDriver();
-        driver.get("http://www.qaclickacademy.com/");
+        driver.get(getProperty("url"));
 
         LandingPage landingPage = new LandingPage(driver);
 
