@@ -4,7 +4,7 @@ import com.danjerous.Browser;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterTest;
+import org.testng.annotations.AfterClass;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -50,5 +50,9 @@ public class Base {
         return  properties.getProperty(property);
     }
 
+    @AfterClass
+    public void tearDown() {
+        driver.close();
+    }
 
 }

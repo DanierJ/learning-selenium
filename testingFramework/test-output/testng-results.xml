@@ -1,92 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="2" total="8" passed="6">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="QA Academy" duration-ms="303209" started-at="2019-09-11T22:44:47Z" finished-at="2019-09-11T22:49:50Z">
+  <suite name="QA Academy" duration-ms="58375" started-at="2019-09-11T23:02:33Z" finished-at="2019-09-11T23:03:31Z">
     <groups>
     </groups>
-    <test name="QA Academy page" duration-ms="303209" started-at="2019-09-11T22:44:47Z" finished-at="2019-09-11T22:49:50Z">
+    <test name="QA Academy page" duration-ms="58375" started-at="2019-09-11T23:02:33Z" finished-at="2019-09-11T23:03:31Z">
       <class name="com.danjerous.framework.ValidateTitle">
-        <test-method status="PASS" signature="basePageNavigation()[pri:0, instance:com.danjerous.framework.ValidateTitle@3aa9e816]" name="basePageNavigation" duration-ms="46420" started-at="2019-09-11T17:48:16Z" finished-at="2019-09-11T17:49:02Z">
+        <test-method status="PASS" signature="basePageNavigation()[pri:0, instance:com.danjerous.framework.ValidateTitle@7006c658]" name="basePageNavigation" duration-ms="34860" started-at="2019-09-11T18:02:33Z" finished-at="2019-09-11T18:03:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- basePageNavigation -->
-      </class> <!-- com.danjerous.framework.ValidateTitle -->
-      <class name="com.danjerous.framework.HomePage">
-        <test-method status="PASS" signature="basePageNavigation(java.lang.String, java.lang.String)[pri:0, instance:com.danjerous.framework.HomePage@7cdbc5d3]" name="basePageNavigation" duration-ms="43385" started-at="2019-09-11T17:44:47Z" data-provider="getData" finished-at="2019-09-11T17:45:30Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[dani]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[dani123]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- basePageNavigation -->
-        <test-method status="PASS" signature="basePageNavigation(java.lang.String, java.lang.String)[pri:0, instance:com.danjerous.framework.HomePage@7cdbc5d3]" name="basePageNavigation" duration-ms="36301" started-at="2019-09-11T17:45:30Z" data-provider="getData" finished-at="2019-09-11T17:46:06Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[javi]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[javi123]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- basePageNavigation -->
-        <test-method status="PASS" signature="basePageNavigation(java.lang.String, java.lang.String)[pri:0, instance:com.danjerous.framework.HomePage@7cdbc5d3]" name="basePageNavigation" duration-ms="70077" started-at="2019-09-11T17:46:06Z" data-provider="getData" finished-at="2019-09-11T17:47:17Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[marti]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[marti123]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- basePageNavigation -->
-        <test-method status="PASS" signature="basePageNavigation(java.lang.String, java.lang.String)[pri:0, instance:com.danjerous.framework.HomePage@7cdbc5d3]" name="basePageNavigation" duration-ms="59103" started-at="2019-09-11T17:47:17Z" data-provider="getData" finished-at="2019-09-11T17:48:16Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[cami]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[cami123]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- basePageNavigation -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.danjerous.framework.HomePage@7cdbc5d3]" name="tearDown" is-config="true" duration-ms="5597" started-at="2019-09-11T17:49:44Z" finished-at="2019-09-11T17:49:50Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.danjerous.framework.ValidateTitle@7006c658]" name="tearDown" is-config="true" duration-ms="381" started-at="2019-09-11T18:03:07Z" finished-at="2019-09-11T18:03:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.danjerous.framework.HomePage -->
+      </class> <!-- com.danjerous.framework.ValidateTitle -->
       <class name="com.danjerous.framework.ValidateNavigation">
-        <test-method status="PASS" signature="navigationVisibilityTest()[pri:0, instance:com.danjerous.framework.ValidateNavigation@17d99928]" name="navigationVisibilityTest" duration-ms="42282" started-at="2019-09-11T17:49:02Z" finished-at="2019-09-11T17:49:44Z">
+        <test-method status="PASS" signature="navigationVisibilityTest()[pri:0, instance:com.danjerous.framework.ValidateNavigation@34033bd0]" name="navigationVisibilityTest" duration-ms="22648" started-at="2019-09-11T18:03:08Z" finished-at="2019-09-11T18:03:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigationVisibilityTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.danjerous.framework.ValidateNavigation@34033bd0]" name="tearDown" is-config="true" duration-ms="434" started-at="2019-09-11T18:03:30Z" finished-at="2019-09-11T18:03:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- com.danjerous.framework.ValidateNavigation -->
     </test> <!-- QA Academy page -->
   </suite> <!-- QA Academy -->
