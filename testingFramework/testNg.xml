@@ -6,7 +6,7 @@
            <!-- <class name="com.danjerous.framework.HomePage">
             </class>-->
             <class name="com.danjerous.framework.ValidateTitle"/>
-            <class name="com.danjerous.framework.ValidateNavigation"/>
+           <!--<class name="com.danjerous.framework.ValidateNavigation"/>-->
         </classes>
     </test>
 </suite>

@@ -3,6 +3,7 @@ package com.danjerous.framework;
 import com.danjerous.framework.page_objects.LandingPage;
 import com.danjerous.framework.page_objects.LoginPage;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -11,10 +12,14 @@ import java.io.IOException;
 public class HomePage extends Base {
     private WebDriver driver;
 
+    @BeforeTest
+    public void init() throws IOException {
+        driver = initializeDriver();
+    }
+
 
     @Test(dataProvider = "getData")
     public void basePageNavigation(String username, String password) throws IOException {
-        driver = initializeDriver();
         driver.get(getProperty("url"));
 
         LandingPage landingPage = new LandingPage(driver);
