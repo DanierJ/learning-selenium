@@ -4,7 +4,7 @@ import com.danjerous.Browser;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Base {
 
-    private WebDriver driver;
+    private static WebDriver driver;
 
 
     public WebDriver initializeDriver() throws IOException {
@@ -50,9 +50,11 @@ public class Base {
         return  properties.getProperty(property);
     }
 
-    @AfterClass
+    @AfterTest
     public void tearDown() {
+        System.out.println("I run");
         driver.close();
+        driver = null;
     }
 
 }

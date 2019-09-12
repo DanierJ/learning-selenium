@@ -23,9 +23,6 @@ public class ValidateNavigation extends Base {
     public void navigationVisibilityTest() {
 
         LandingPage landingPage = new LandingPage(driver);
-
-
         Assert.assertTrue(landingPage.getNavigationBar().isDisplayed());
-
     }
 }

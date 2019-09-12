@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-QA_Academy">
-              <span class="suite-name border-passed">QA Academy</span>
+              <span class="suite-name border-failed">QA Academy</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-QA_Academy">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">3 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-QA_Academy" class="hide-methods failed suite-QA_Academy"> (hide)</a> <!-- hide-methods failed suite-QA_Academy -->
+                      <a href="#" panel-name="suite-QA_Academy" class="show-methods failed suite-QA_Academy"> (show)</a> <!-- show-methods failed suite-QA_Academy -->
+                    </span>
+                    <div class="method-list-content failed suite-QA_Academy">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-QA_Academy" title="com.danjerous.framework.HomePage" hash-for-method="basePageNavigation(dani, dani123)">basePageNavigation(dani, dani123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-QA_Academy -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -122,21 +136,40 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-QA_Academy" class="panel QA_Academy">
-          <div class="suite-QA_Academy-class-passed">
+          <div class="suite-QA_Academy-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.danjerous.framework.ValidateNavigation</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.danjerous.framework.HomePage</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="navigationVisibilityTest">
-                  </a> <!-- navigationVisibilityTest -->
-                  <span class="method-name">navigationVisibilityTest</span>
+                  <a name="basePageNavigation(dani, dani123)">
+                  </a> <!-- basePageNavigation(dani, dani123) -->
+                  <span class="method-name">basePageNavigation</span>
+                  <span class="parameters">(dani, dani123)</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a href=&quot;http://qaclickacademy.usefedora.com/sign_in&quot;&gt;...&lt;/a&gt; is not clickable at point (992, 16). Other element would receive the click: &lt;div class=&quot;listbuilder-popup-content&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=77.0.3865.75)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-ETN96FDI&apos;, ip: &apos;192.168.1.72&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.75, chrome: {chromedriverVersion: 76.0.3809.126 (d80a294506b4..., userDataDir: C:\Users\DANIER~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57899}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: c26e26de7c33e25851ce55c6409450a4
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.danjerous.framework.HomePage.basePageNavigation(HomePage.java:27)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-QA_Academy-class-passed -->
+          </div> <!-- suite-QA_Academy-class-failed -->
           <div class="suite-QA_Academy-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -148,6 +181,21 @@
                   <a name="basePageNavigation">
                   </a> <!-- basePageNavigation -->
                   <span class="method-name">basePageNavigation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-QA_Academy-class-passed -->
+          <div class="suite-QA_Academy-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.danjerous.framework.ValidateNavigation</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="navigationVisibilityTest">
+                  </a> <!-- navigationVisibilityTest -->
+                  <span class="method-name">navigationVisibilityTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -164,10 +212,19 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;QA Academy&quot;&gt;
   &lt;test name=&quot;QA Academy page&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.danjerous.framework.ValidateTitle&quot;/&gt;
-      &lt;class name=&quot;com.danjerous.framework.ValidateNavigation&quot;/&gt;
+      &lt;class name=&quot;com.danjerous.framework.HomePage&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- QA Academy page --&gt;
+  &lt;test name=&quot;Validating home page title&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.danjerous.framework.ValidateTitle&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Validating home page title --&gt;
+  &lt;test name=&quot;Validating navigation bar&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.danjerous.framework.ValidateNavigation&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Validating navigation bar --&gt;
 &lt;/suite&gt; &lt;!-- QA Academy --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -179,7 +236,13 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">QA Academy page (2 classes)</span>
+                <span class="test-name">QA Academy page (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Validating home page title (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Validating navigation bar (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -205,20 +268,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'basePageNavigation')
-data.setCell(0, 2, 'com.danjerous.framework.ValidateTitle')
-data.setCell(0, 3, 34860);
+data.setCell(0, 2, 'com.danjerous.framework.HomePage')
+data.setCell(0, 3, 14790);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'navigationVisibilityTest')
 data.setCell(1, 2, 'com.danjerous.framework.ValidateNavigation')
-data.setCell(1, 3, 22648);
+data.setCell(1, 3, 108);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'basePageNavigation')
+data.setCell(2, 2, 'com.danjerous.framework.ValidateTitle')
+data.setCell(2, 3, 80);
 window.suiteTableData['QA_Academy']= { tableData: data, tableDiv: 'times-div-QA_Academy'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 57 seconds</span>
+              <span class="suite-total-time">Total running time: 14 seconds</span>
               <div id="times-div-QA_Academy">
               </div> <!-- times-div-QA_Academy -->
             </div> <!-- times-div -->
@@ -244,26 +311,51 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+              <div class="chronological-class-name">com.danjerous.framework.HomePage</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">init</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">basePageNavigation(dani, dani123)</span>
+                <span class="method-start">4513 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">19315 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
               <div class="chronological-class-name">com.danjerous.framework.ValidateTitle</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">init</span>
+                <span class="method-start">19595 ms</span>
+              </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">basePageNavigation</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">31667 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class after">
+              <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">34860 ms</span>
-              </div> <!-- configuration-class after -->
+                <span class="method-start">31751 ms</span>
+              </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.danjerous.framework.ValidateNavigation</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">init</span>
+                <span class="method-start">33949 ms</span>
+              </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">navigationVisibilityTest</span>
-                <span class="method-start">35249 ms</span>
+                <span class="method-start">48005 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class after">
+              <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">57901 ms</span>
-              </div> <!-- configuration-class after -->
+                <span class="method-start">48113 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

@@ -3,10 +3,18 @@
 <suite name="QA Academy">
     <test name="QA Academy page">
         <classes>
-           <!-- <class name="com.danjerous.framework.HomePage">
-            </class>-->
+            <class name="com.danjerous.framework.HomePage">
+            </class>
+        </classes>
+    </test>
+    <test name="Validating home page title">
+        <classes>
             <class name="com.danjerous.framework.ValidateTitle"/>
-           <!--<class name="com.danjerous.framework.ValidateNavigation"/>-->
+        </classes>
+    </test>
+    <test name="Validating navigation bar">
+        <classes>
+            <class name="com.danjerous.framework.ValidateNavigation"/>
         </classes>
     </test>
 </suite>

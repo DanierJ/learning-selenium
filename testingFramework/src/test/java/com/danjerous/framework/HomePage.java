@@ -38,10 +38,10 @@ public class HomePage extends Base {
     public Object[][] getData() {
         // rows: how many data, col: how many parameters
         return new Object[][] {
-                {"dani", "dani123"},
-                {"javi", "javi123"},
+                {"dani", "dani123"}
+               /* {"javi", "javi123"},
                 {"marti", "marti123"},
-                {"cami", "cami123"}
+                {"cami", "cami123"}*/
         };
     }
 }
