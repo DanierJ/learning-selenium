@@ -66,7 +66,6 @@ public class Base implements ITestListener {
 
     @AfterTest
     public void tearDown() {
-        System.out.println("I run");
         driver.close();
         driver = null;
     }

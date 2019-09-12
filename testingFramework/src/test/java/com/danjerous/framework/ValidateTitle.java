@@ -14,7 +14,7 @@ import static org.testng.Assert.assertEquals;
 public class ValidateTitle extends Base {
     private WebDriver driver;
 
-    private static Logger log = LogManager.getLogger(Base.class.getName());
+    private static Logger log = LogManager.getLogger(ValidateTitle.class.getName());
 
     @BeforeTest
     public void init() throws IOException {
