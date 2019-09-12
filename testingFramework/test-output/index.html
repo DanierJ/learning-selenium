@@ -5,7 +5,7 @@
   <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
     <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -153,8 +153,8 @@
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;LAPTOP-ETN96FDI&apos;, ip: &apos;192.168.1.72&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.75, chrome: {chromedriverVersion: 76.0.3809.126 (d80a294506b4..., userDataDir: C:\Users\DANIER~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57899}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: c26e26de7c33e25851ce55c6409450a4
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.75, chrome: {chromedriverVersion: 76.0.3809.126 (d80a294506b4..., userDataDir: C:\Users\DANIER~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58344}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 009c02321671f94023931b41290017ee
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -164,7 +164,8 @@ Session ID: c26e26de7c33e25851ce55c6409450a4
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
 	at com.danjerous.framework.HomePage.basePageNavigation(HomePage.java:27)
-... Removed 28 stack frames
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+... Removed 30 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -208,19 +209,22 @@ Session ID: c26e26de7c33e25851ce55c6409450a4
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;QA Academy&quot;&gt;
-  &lt;test name=&quot;QA Academy page&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.danjerous.framework.Listeners&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;QA Academy page&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.danjerous.framework.HomePage&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- QA Academy page --&gt;
-  &lt;test name=&quot;Validating home page title&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Validating home page title&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.danjerous.framework.ValidateTitle&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Validating home page title --&gt;
-  &lt;test name=&quot;Validating navigation bar&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Validating navigation bar&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.danjerous.framework.ValidateNavigation&quot;/&gt;
     &lt;/classes&gt;
@@ -272,20 +276,20 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'basePageNavigation')
 data.setCell(0, 2, 'com.danjerous.framework.HomePage')
-data.setCell(0, 3, 14790);
+data.setCell(0, 3, 16001);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'navigationVisibilityTest')
-data.setCell(1, 2, 'com.danjerous.framework.ValidateNavigation')
-data.setCell(1, 3, 108);
+data.setCell(1, 1, 'basePageNavigation')
+data.setCell(1, 2, 'com.danjerous.framework.ValidateTitle')
+data.setCell(1, 3, 695);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'basePageNavigation')
-data.setCell(2, 2, 'com.danjerous.framework.ValidateTitle')
-data.setCell(2, 3, 80);
+data.setCell(2, 1, 'navigationVisibilityTest')
+data.setCell(2, 2, 'com.danjerous.framework.ValidateNavigation')
+data.setCell(2, 3, 368);
 window.suiteTableData['QA_Academy']= { tableData: data, tableDiv: 'times-div-QA_Academy'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 14 seconds</span>
+              <span class="suite-total-time">Total running time: 17 seconds</span>
               <div id="times-div-QA_Academy">
               </div> <!-- times-div-QA_Academy -->
             </div> <!-- times-div -->
@@ -320,41 +324,41 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">basePageNavigation(dani, dani123)</span>
-                <span class="method-start">4513 ms</span>
+                <span class="method-start">9236 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">19315 ms</span>
+                <span class="method-start">26438 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.danjerous.framework.ValidateTitle</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">init</span>
-                <span class="method-start">19595 ms</span>
+                <span class="method-start">27614 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">basePageNavigation</span>
-                <span class="method-start">31667 ms</span>
+                <span class="method-start">41920 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">31751 ms</span>
+                <span class="method-start">42615 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.danjerous.framework.ValidateNavigation</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">init</span>
-                <span class="method-start">33949 ms</span>
+                <span class="method-start">43079 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">navigationVisibilityTest</span>
-                <span class="method-start">48005 ms</span>
+                <span class="method-start">58180 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">48113 ms</span>
+                <span class="method-start">58548 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

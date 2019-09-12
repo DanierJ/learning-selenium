@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [QA Academy]">
-  <test name="QA Academy page(failed)">
+  <listeners>
+    <listener class-name="com.danjerous.framework.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="QA Academy page(failed)">
     <classes>
       <class name="com.danjerous.framework.HomePage">
         <methods>
@@ -10,18 +13,6 @@
           <include name="init"/>
         </methods>
       </class> <!-- com.danjerous.framework.HomePage -->
-      <class name="com.danjerous.framework.ValidateTitle">
-        <methods>
-          <include name="tearDown"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- com.danjerous.framework.ValidateTitle -->
-      <class name="com.danjerous.framework.ValidateNavigation">
-        <methods>
-          <include name="tearDown"/>
-          <include name="init"/>
-        </methods>
-      </class> <!-- com.danjerous.framework.ValidateNavigation -->
     </classes>
   </test> <!-- QA Academy page(failed) -->
 </suite> <!-- Failed suite [QA Academy] -->

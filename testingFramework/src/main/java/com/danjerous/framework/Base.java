@@ -1,9 +1,15 @@
 package com.danjerous.framework;
 
 import com.danjerous.Browser;
+import org.apache.commons.io.FileUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.ITestListener;
 import org.testng.annotations.AfterTest;
 
 import java.io.File;
@@ -12,9 +18,10 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-public class Base {
+public class Base implements ITestListener {
 
     private static WebDriver driver;
+    private static Logger log = LogManager.getLogger(Base.class.getName());
 
 
     public WebDriver initializeDriver() throws IOException {
@@ -48,6 +55,13 @@ public class Base {
         properties.load(fileInputStream);
 
         return  properties.getProperty(property);
+    }
+
+    public void getScreenShot(String name) throws IOException {
+        File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+        FileUtils.copyFile(src, new File("C:\\Users\\Danier Javid\\Desktop\\Courses\\selenium\\testingFramework\\scheenshots\\" + name + "screenshotFailure.png"));
+
     }
 
     @AfterTest
