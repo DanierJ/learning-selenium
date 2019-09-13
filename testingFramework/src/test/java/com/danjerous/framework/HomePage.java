@@ -16,8 +16,6 @@ public class HomePage extends Base {
     public void init() throws IOException {
         driver = initializeDriver();
     }
-
-
     @Test(dataProvider = "getData")
     public void basePageNavigation(String username, String password) throws IOException {
         driver.get(getProperty("url"));
@@ -39,7 +37,7 @@ public class HomePage extends Base {
         // rows: how many data, col: how many parameters
         return new Object[][] {
                 {"dani", "dani123"}
-               /* {"javi", "javi123"},
+               /* {"javi", "javi123"}
                 {"marti", "marti123"},
                 {"cami", "cami123"}*/
         };
