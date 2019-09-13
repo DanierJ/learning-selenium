@@ -22,7 +22,7 @@ public class StepDefinition extends Base implements En {
         driver = initializeDriver();
 
     }
-   /* public void us() { With Lambdas!!! 
+   /* public void us() { With Lambdas!!!
         Given("^Initialize the browser with chrome$", () -> {
             try {
                 driver = initializeDriver();

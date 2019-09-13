@@ -3,16 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [QA Academy]">
   <listeners>
     <listener class-name="com.danjerous.framework.Listeners"/>
+    <listener class-name="com.danjerous.framework.ExtentReporterNG"/>
   </listeners>
-  <test thread-count="5" name="QA Academy page(failed)">
+  <test thread-count="5" name="cucumber testng(failed)">
     <classes>
-      <class name="com.danjerous.framework.HomePage">
+      <class name="com.danjerous.framework.cucumber.TestRunner">
         <methods>
-          <include name="basePageNavigation" invocation-numbers="0"/>
-          <include name="tearDown"/>
-          <include name="init"/>
+          <include name="setUpClass"/>
+          <include name="feature"/>
+          <include name="tearDownClass"/>
         </methods>
-      </class> <!-- com.danjerous.framework.HomePage -->
+      </class> <!-- com.danjerous.framework.cucumber.TestRunner -->
     </classes>
-  </test> <!-- QA Academy page(failed) -->
+  </test> <!-- cucumber testng(failed) -->
 </suite> <!-- Failed suite [QA Academy] -->

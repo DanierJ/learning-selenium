@@ -1,11 +1,11 @@
 package com.danjerous.framework.cucumber;
 
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
-import org.junit.runner.RunWith;
+import cucumber.api.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
 
-@RunWith(Cucumber.class)
+
+//@RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/java/features", glue = "stepdefinitions")
-public class TestRunner {
+public class TestRunner extends AbstractTestNGCucumberTests {
 }

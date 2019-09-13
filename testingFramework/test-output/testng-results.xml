@@ -2,68 +2,71 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="QA Academy" duration-ms="63804" started-at="2019-09-12T15:34:46 COT" finished-at="2019-09-12T15:35:50 COT">
+  <suite name="QA Academy" duration-ms="86397" started-at="2019-09-13T17:17:21 COT" finished-at="2019-09-13T17:18:47 COT">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.danjerous.framework.cucumber.TestRunner@4501b7af]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test name="QA Academy page" duration-ms="18154" started-at="2019-09-12T15:34:46 COT" finished-at="2019-09-12T15:35:04 COT">
-      <class name="com.danjerous.framework.HomePage">
-        <test-method status="PASS" signature="init()[pri:0, instance:com.danjerous.framework.HomePage@3a93b025]" name="init" is-config="true" duration-ms="2721" started-at="2019-09-12T15:34:46 COT" finished-at="2019-09-12T15:34:49 COT">
+    <test name="cucumber testng" duration-ms="86397" started-at="2019-09-13T17:17:21 COT" finished-at="2019-09-13T17:18:47 COT">
+      <class name="com.danjerous.framework.cucumber.TestRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.danjerous.framework.cucumber.TestRunner@4501b7af]" name="setUpClass" is-config="true" duration-ms="200" started-at="2019-09-13T17:17:21 COT" finished-at="2019-09-13T17:17:21 COT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="basePageNavigation(java.lang.String, java.lang.String)[pri:0, instance:com.danjerous.framework.HomePage@3a93b025]" name="basePageNavigation" duration-ms="15289" started-at="2019-09-12T15:34:49 COT" data-provider="getData" finished-at="2019-09-12T15:35:04 COT">
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.danjerous.framework.cucumber.TestRunner@4501b7af]" name="runScenario" duration-ms="34175" started-at="2019-09-13T17:17:21 COT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-09-13T17:17:55 COT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[dani]]>
+                <![CDATA["Positive test validating login"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[dani123]]>
+                <![CDATA["Login into application"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- basePageNavigation -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.danjerous.framework.HomePage@3a93b025]" name="tearDown" is-config="true" duration-ms="115" started-at="2019-09-12T15:35:04 COT" finished-at="2019-09-12T15:35:04 COT">
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.danjerous.framework.cucumber.TestRunner@4501b7af]" name="runScenario" duration-ms="29132" started-at="2019-09-13T17:17:55 COT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-09-13T17:18:24 COT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Positive test validating login"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login into application"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.danjerous.framework.HomePage -->
-    </test> <!-- QA Academy page -->
-    <test name="Validating home page title" duration-ms="12002" started-at="2019-09-12T15:35:04 COT" finished-at="2019-09-12T15:35:16 COT">
-      <class name="com.danjerous.framework.ValidateTitle">
-        <test-method status="PASS" signature="init()[pri:0, instance:com.danjerous.framework.ValidateTitle@72967906]" name="init" is-config="true" duration-ms="11905" started-at="2019-09-12T15:35:04 COT" finished-at="2019-09-12T15:35:16 COT">
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.danjerous.framework.cucumber.TestRunner@4501b7af]" name="runScenario" duration-ms="22782" started-at="2019-09-13T17:18:24 COT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-09-13T17:18:47 COT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Positive test validating login"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login into application"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="basePageNavigation()[pri:0, instance:com.danjerous.framework.ValidateTitle@72967906]" name="basePageNavigation" duration-ms="39" started-at="2019-09-12T15:35:16 COT" finished-at="2019-09-12T15:35:16 COT">
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.danjerous.framework.cucumber.TestRunner@4501b7af]" name="tearDownClass" is-config="true" duration-ms="3" started-at="2019-09-13T17:18:47 COT" finished-at="2019-09-13T17:18:47 COT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- basePageNavigation -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.danjerous.framework.ValidateTitle@72967906]" name="tearDown" is-config="true" duration-ms="57" started-at="2019-09-12T15:35:16 COT" finished-at="2019-09-12T15:35:16 COT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.danjerous.framework.ValidateTitle -->
-    </test> <!-- Validating home page title -->
-    <test name="Validating navigation bar" duration-ms="33601" started-at="2019-09-12T15:35:16 COT" finished-at="2019-09-12T15:35:50 COT">
-      <class name="com.danjerous.framework.ValidateNavigation">
-        <test-method status="PASS" signature="init()[pri:0, instance:com.danjerous.framework.ValidateNavigation@4f83df68]" name="init" is-config="true" duration-ms="33291" started-at="2019-09-12T15:35:16 COT" finished-at="2019-09-12T15:35:49 COT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="navigationVisibilityTest()[pri:0, instance:com.danjerous.framework.ValidateNavigation@4f83df68]" name="navigationVisibilityTest" duration-ms="50" started-at="2019-09-12T15:35:49 COT" finished-at="2019-09-12T15:35:49 COT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigationVisibilityTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.danjerous.framework.ValidateNavigation@4f83df68]" name="tearDown" is-config="true" duration-ms="258" started-at="2019-09-12T15:35:49 COT" finished-at="2019-09-12T15:35:50 COT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.danjerous.framework.ValidateNavigation -->
-    </test> <!-- Validating navigation bar -->
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.danjerous.framework.cucumber.TestRunner -->
+    </test> <!-- cucumber testng -->
   </suite> <!-- QA Academy -->
 </testng-results>

@@ -5,7 +5,7 @@
         <listener class-name="com.danjerous.framework.Listeners" />
         <listener class-name="com.danjerous.framework.ExtentReporterNG" />
     </listeners>
-    <test name="QA Academy page">
+    <!--<test name="QA Academy page">
         <classes>
             <class name="com.danjerous.framework.HomePage">
             </class>
@@ -19,6 +19,11 @@
     <test name="Validating navigation bar">
         <classes>
             <class name="com.danjerous.framework.ValidateNavigation"/>
+        </classes>
+    </test>-->
+    <test name="cucumber testng">
+        <classes>
+            <class name="com.danjerous.framework.cucumber.TestRunner" />
         </classes>
     </test>
 </suite>
