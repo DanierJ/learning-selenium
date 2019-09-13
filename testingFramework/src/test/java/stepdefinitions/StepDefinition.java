@@ -7,12 +7,14 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.java8.En;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
+
 import java.io.IOException;
 
-public class StepDefinition extends Base {
+public class StepDefinition extends Base implements En {
     private WebDriver driver;
 
     @Given("^Initialize the browser with chrome$")
@@ -20,6 +22,16 @@ public class StepDefinition extends Base {
         driver = initializeDriver();
 
     }
+   /* public void us() { With Lambdas!!! 
+        Given("^Initialize the browser with chrome$", () -> {
+            try {
+                driver = initializeDriver();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+    }*/
+
 
     @When("^User enters \"([^\"]*)\" and \"([^\"]*)\" and logs in$")
     public void user_enters_something_and_something_and_logs_in(String username, String password) {
