@@ -1,4 +1,4 @@
-package com.danjerous.framework.kim_way;
+package com.danjerous.framework.kimway;
 
 import org.testng.annotations.Test;
 

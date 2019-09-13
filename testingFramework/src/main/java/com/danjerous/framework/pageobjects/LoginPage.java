@@ -1,4 +1,4 @@
-package com.danjerous.framework.page_objects;
+package com.danjerous.framework.pageobjects;
 
 import com.danjerous.framework.Base;
 import org.openqa.selenium.By;

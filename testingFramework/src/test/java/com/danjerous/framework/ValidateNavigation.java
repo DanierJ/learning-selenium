@@ -1,6 +1,6 @@
 package com.danjerous.framework;
 
-import com.danjerous.framework.page_objects.LandingPage;
+import com.danjerous.framework.pageobjects.LandingPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;

@@ -1,7 +1,7 @@
 package com.danjerous.framework;
 
-import com.danjerous.framework.page_objects.LandingPage;
-import com.danjerous.framework.page_objects.LoginPage;
+import com.danjerous.framework.pageobjects.LandingPage;
+import com.danjerous.framework.pageobjects.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;

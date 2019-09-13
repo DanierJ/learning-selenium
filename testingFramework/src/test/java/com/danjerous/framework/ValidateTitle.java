@@ -1,6 +1,6 @@
 package com.danjerous.framework;
 
-import com.danjerous.framework.page_objects.LandingPage;
+import com.danjerous.framework.pageobjects.LandingPage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;

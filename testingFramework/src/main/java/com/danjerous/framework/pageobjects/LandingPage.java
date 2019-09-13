@@ -1,4 +1,4 @@
-package com.danjerous.framework.page_objects;
+package com.danjerous.framework.pageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

@@ -1,4 +1,4 @@
-package com.danjerous.framework.kim_way;
+package com.danjerous.framework.kimway;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
