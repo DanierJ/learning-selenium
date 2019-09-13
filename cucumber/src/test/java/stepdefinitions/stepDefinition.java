@@ -17,6 +17,11 @@ public class stepDefinition {
         System.out.println("I logged in with username and password");
     }
 
+    @When("^User logins into application with username \"([^\"]*)\" and password \"([^\"]*)\"$")
+    public void user_logins_into_application_with_username_something_and_password_something(String username, String password)  {
+        System.out.println("Scenario with regular expression parameters. Username: " + username + ", password: " + password);
+    }
+
     @Then("^Home page is populated$")
     public void homePageIsPopulated() {
         System.out.println("Home page gets populated");
@@ -25,5 +30,10 @@ public class stepDefinition {
     @And("Cards are displayed")
     public void cardsAreDisplayed() {
         System.out.println("Cards are displayed");
+    }
+
+    @And("^it is \"([^\"]*)\" that cards are displayed$")
+    public void it_is_not_something_that_cards_are_displayed(String displayed)  {
+        System.out.println("It is " + displayed + " that cards are displayed.");
     }
 }
