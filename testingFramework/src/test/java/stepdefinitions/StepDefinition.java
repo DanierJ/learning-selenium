@@ -31,6 +31,16 @@ public class StepDefinition extends Base {
         loginPage.getLogin().click();
     }
 
+    @When("^User enters (.+) and (.+) and logs in$")
+    public void user_enters_and_and_logs_in(String username, String password) {
+        LoginPage loginPage = new LoginPage(driver);
+
+        loginPage.getEmail().sendKeys(username);
+        loginPage.getPassword().sendKeys(password);
+
+        loginPage.getLogin().click();
+    }
+
     @Then("^Verify taht user is successfully log in$")
     public void verify_taht_user_is_successfully_log_in() {
         Assert.assertEquals("Verifying that the user loged in", "QaClickAcademy", driver.getTitle());
@@ -50,5 +60,10 @@ public class StepDefinition extends Base {
         }
 
         landingPage.signIn().click();
+    }
+
+    @And("^Close browsers$")
+    public void close_browsers() {
+        driver.close();
     }
 }
