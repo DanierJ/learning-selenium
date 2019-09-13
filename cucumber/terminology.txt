@@ -2,4 +2,4 @@
 
 2. Step definition file: for every step you define in your scenario should be mapped with related automation code.
 
-3. Test runner: trigger all the test cases. 
+3. Test runner: trigger all the test cases.
