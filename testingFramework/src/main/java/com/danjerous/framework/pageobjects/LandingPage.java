@@ -14,6 +14,8 @@ public class LandingPage {
 
     private By navigationBar = By.xpath("//ul[@class='nav navbar-nav navbar-right']");
 
+    private By popUp = By.xpath("//button[contains(text(),'NO THANKS')]");
+
     public LandingPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -28,5 +30,13 @@ public class LandingPage {
 
     public WebElement getNavigationBar() {
         return this.driver.findElement(navigationBar);
+    }
+
+    public int getPopUpSize() {
+        return this.driver.findElements(popUp).size();
+    }
+
+    public WebElement getPopUp() {
+        return this.driver.findElement(popUp);
     }
 }

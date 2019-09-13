@@ -51,7 +51,7 @@ public class Base implements ITestListener {
     public String getProperty(String property) throws IOException {
         Properties properties = new Properties();
 
-        FileInputStream fileInputStream = new FileInputStream(new File("C:\\Users\\Danier Javid\\Desktop\\Courses\\selenium\\testingFramework\\src\\main\\java\\com\\danjerous\\framework\\class_resources\\data.properties"));
+        FileInputStream fileInputStream = new FileInputStream(new File("C:\\Users\\Danier Javid\\Desktop\\Courses\\selenium\\testingFramework\\src\\main\\java\\com\\danjerous\\framework\\classresources\\data.properties"));
         properties.load(fileInputStream);
 
         return  properties.getProperty(property);

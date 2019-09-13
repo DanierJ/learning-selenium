@@ -17,8 +17,8 @@ public class stepDefinition {
         System.out.println("I logged in with username and password");
     }
 
-    @When("^User logins into application with username \"([^\"]*)\" and password \"([^\"]*)\"$")
-    public void user_logins_into_application_with_username_something_and_password_something(String username, String password)  {
+    @When("^User logs in into application with username \"([^\"]*)\" and password \"([^\"]*)\"$")
+    public void user_logs_in_into_application_with_username_something_and_password_something(String username, String password)  {
         System.out.println("Scenario with regular expression parameters. Username: " + username + ", password: " + password);
     }
 
